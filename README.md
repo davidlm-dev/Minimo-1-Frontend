@@ -2,9 +2,15 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
 
-## Ejercicio
+## Minimo 1 
 
-He añadido un componente con ng generate component register y he utilizado como apoyo las slides del seminario y github copilot. También los comentarios que hicieron los profesores en el chat de gmail de la UPC.
+Para el frontend básicamente lo que he realizado a sido lo siguiente:
+    -Nuevo componente (Tag)
+    -Nuevo modelo (Tag)
+    -NUevo servicio (Tag)
+
+En el servicio están todas las llamadas al CRUD de la API pero solo he podido implementar gráficamente la de crear una nueva tag a partir del nombre de esta, descripción, un número y la id del usuario por lo tanto me falta que muestre las tags y que al lado el botón ejecute el método onDelete() o el que sea.
+
 
 ## Development server
 

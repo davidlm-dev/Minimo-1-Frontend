@@ -1,0 +1,40 @@
+<div class="tag-container">
+  <h2>Crear Nueva Etiqueta</h2>
+  
+  <form [formGroup]="tagForm" (ngSubmit)="onCreateTag()">
+    <div class="form-group">
+      <label for="name">Nombre</label>
+      <input id="name" formControlName="name" type="text" placeholder="Nombre de la etiqueta" />
+      <div *ngIf="tagForm.controls['name'].invalid && tagForm.controls['name'].touched" class="error">
+        Nombre es requerido.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Descripción</label>
+      <input id="description" formControlName="description" type="text" placeholder="Descripción de la etiqueta" />
+      <div *ngIf="tagForm.controls['description'].invalid && tagForm.controls['description'].touched" class="error">
+        Descripción es requerida.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="number">Número</label>
+      <input id="number" formControlName="number" type="number" placeholder="Número único" />
+      <div *ngIf="tagForm.controls['number'].invalid && tagForm.controls['number'].touched" class="error">
+        El número es requerido y debe ser mayor que 0.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="idUsuario">ID del Usuario</label>
+      <input id="idUsuario" formControlName="idUsuario" type="text" placeholder="ID del usuario" />
+      <div *ngIf="tagForm.controls['idUsuario'].invalid && tagForm.controls['idUsuario'].touched" class="error">
+        ID del usuario es requerido.
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="tagForm.invalid">Crear Etiqueta</button>
+  </form>
+  
+</div>

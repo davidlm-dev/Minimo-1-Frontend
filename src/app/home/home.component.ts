@@ -29,4 +29,8 @@ export class HomeComponent implements OnInit {
   goToDrones(): void {
     this.router.navigate(['/drones']);
   }
+
+  goToTags(): void {
+    this.router.navigate(['/tag']);
+  }
 }
